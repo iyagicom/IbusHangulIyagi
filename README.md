@@ -14,7 +14,6 @@ Wayland + GNOME 환경에서 동작하며, 외부 한글 라이브러리 없이 
 오랫동안 수정되지 않은 고질적인 버그입니다.
 
 IbusHangulIyagi는 이 끝문자 버그를 해결하기 위해 처음부터 직접 작성한 IBus 엔진입니다.  
-`IBUS_ENGINE_PREEDIT_COMMIT` 모드와 포커스 이탈 시 강제 commit을 함께 사용하여  
 끝문자가 어떤 상황에서도 소실되지 않도록 구현했습니다.
 
 ---
