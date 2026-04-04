@@ -1,3 +1,4 @@
+
 ============================================================
 IYAGI INC IbusHangulIyagi License (English) – Executable files only, source code not publicly available
 IYAGI INC 패널이야기 라이선스 (한글) – 실행 파일 전용, 소스 코드 비공개
