@@ -14,6 +14,7 @@ Wayland + GNOME 환경에서 동작하며, 외부 한글 라이브러리 없이 
 오랫동안 수정되지 않은 고질적인 버그입니다.
 
 IbusHangulIyagi는 이 끝문자 버그를 해결하기 위해 처음부터 직접 작성한 IBus 엔진입니다.  
+`IBUS_ENGINE_PREEDIT_COMMIT` 모드와 포커스 이탈 시 강제 commit을 함께 사용하여  
 끝문자가 어떤 상황에서도 소실되지 않도록 구현했습니다.
 
 ---
@@ -95,8 +96,7 @@ IBus는 설치만으로 엔진이 자동 활성화되지 않습니다.
 ibus engine hanguliyagi
 
 # 재부팅 후에도 자동으로 이 엔진 사용
-gsettings set org.freedesktop.ibus.general preload-engines "['hanguliyagi']"
-gsettings set org.freedesktop.ibus.general engines-order "['hanguliyagi']"
+gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hanguliyagi')]"
 ```
 
 | gsettings 키 | 역할 |
@@ -155,10 +155,10 @@ sudo rm /usr/share/ibus/component/hanguliyagi.xml
 ibus restart
 ```
 
-gsettings 초기화:
+## gsettings 초기화:
 ```bash
-gsettings reset org.freedesktop.ibus.general preload-engines
-gsettings reset org.freedesktop.ibus.general engines-order
+  gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hanguliyagi'), ('xkb', 'us')]"
+  ibus restart
 ```
 
 ---
@@ -169,5 +169,9 @@ gsettings reset org.freedesktop.ibus.general engines-order
 |------|------|
 | Chrome (Wayland) | 완벽 동작 |
 | GNOME 텍스트 편집기 | 완벽 동작 |
-| GNOME Terminal | 완벽 동작 |
+| GNOME Terminal | 동작, 커셔 빔으로 |
 | IDLE (Python/Tk) | preedit 풍선 표시 안 됨 (Tk 한계, 수정 불가) |
+
+
+  gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hanguliyagi'), ('xkb', 'us')]"
+  ibus restart
