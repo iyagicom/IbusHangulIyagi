@@ -1,4 +1,4 @@
-# IbusHangulIyagi
+# IbusHangulIyagi 노린(Norin) - 노린은 순수 우리말의 이쁜 의미를 담은 한글대체 명사다.
 
 IBus 프레임워크 기반 한글 두벌식 입력기 엔진.  
 Wayland + GNOME 환경에서 동작하며, 외부 한글 라이브러리 없이 자체 구현한 조합 엔진을 사용합니다.
