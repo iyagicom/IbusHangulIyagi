@@ -157,7 +157,7 @@ ibus restart
 
 ibus engine hanguliyagi
 
-gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hanguliyagi')]"
+gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hanguliyagi'), ('xkb', 'us')]"
 
 ---
 
@@ -209,7 +209,7 @@ sudo rm /usr/local/libexec/ibus-engine-hanguliyagi
 sudo rm /usr/share/ibus/component/hanguliyagi.xml
 ibus restart
 
-gsettings set org.gnome.desktop.input-sources sources "[('ibus', 'hanguliyagi'), ('xkb', 'us')]"
+gsettings set org.freedesktop.ibus.general engines-order "['hangul']"
 ibus restart
 
 ---
