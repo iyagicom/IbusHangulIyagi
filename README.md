@@ -205,7 +205,7 @@ Chrome (Wayland) | 완벽
 GNOME 텍스트 편집기 | 완벽
 GNOME Terminal | 정상 동작
 IDLE (Tk) | preedit 표시 불가
-
+```
 ---
 
 ### 개발: IYAGI INC
