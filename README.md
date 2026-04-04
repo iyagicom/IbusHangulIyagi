@@ -208,4 +208,4 @@ IDLE (Tk) | preedit 표시 불가
 
 ---
 
-개발: IYAGI INC
+### 개발: IYAGI INC
